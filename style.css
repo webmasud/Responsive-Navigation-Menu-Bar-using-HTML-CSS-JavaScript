@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(17, 54, 219);
+}
+
+label.logo {
+    color: white;
+    font-weight: 800;
+    font-size: 35px;
+    margin: 0 70px;
+    line-height: 70px;
+}
+
+nav ul {
+    float: right;
+    margin: 0 40px;
+}
+
+nav li {
+    display: block;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 8px
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 70px;
+    padding: 7px 10px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+a.active,
+a:hover {
+    border: 1px solid white;
+}
+
+label#icon {
+    color: white;
+    font-size: 30px;
+    line-height: 70px;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 1048px) {
+    label.logo {
+        font-size: 32px;
+        padding-left: 20px;
+    }
+    nav ul {
+        margin-right: 20px;
+    }
+    nav ul a {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 990px) {
+    label#icon {
+        display: block;
+        padding-right: 20px
+    }
+    label.logo {
+        color: white;
+        font-weight: 800;
+        font-size: 30px;
+        margin: 0 30px;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #2f3640;
+        top: 70px;
+        left: -100%;
+        text-align: center;
+        margin: 0px;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+        border: none;
+        color: #3498db
+    }
+    nav ul.show {
+        left: 0;
+    }
+}
+
+section {
+    background: url("img/background.jpg") no-repeat;
+    background-size: cover;
+    height: calc(100vh - 70px);
+}
